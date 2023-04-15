@@ -1,0 +1,44 @@
+
+<div class="container py-4">
+  <div class="row">
+      <div class="col-lg-12"><%- include('./header.ejs')%></div>
+      <div class="col-lg-2 col-md-6 col-sm-6 border "><%- include('./left.ejs')%></div>
+      
+  <div class="col-lg-10 col-md-6 col-sm-6 mt-lg-4 table-responsive-lg">
+    <% if(data.length>0) { %>      
+  <table class="table table-bordered ">
+
+      <tr>
+        <th>Index</th>
+        <th> email</th>
+        <th> mobile</th>
+        <th> select </th>
+        <th>complain</th>
+      </tr>
+
+      <% for(var i=0; i<data.length; i++){ %>
+      <tr>
+        <td><%= i %></td>
+        <td><%= data[i].email %></td>
+        <td><%= data[i].mobile %></td>
+        <td><%= data[i].select %></td>
+        <td><%= data[i].textarea %></td>
+        <td>
+          <a role="button" class="btn btn-danger btn-sm " href='/deleted/<%= data[i]._id %>'>Remove</a>
+          <a  role="button" class="btn btn-success btn-sm" href='/shows/<%= data[i]._id %>'>Show</a>
+        </td>
+      </tr>
+      <%} %>
+      
+      
+  </table>
+  <% } else { %>
+    no record found
+     <% } %>
+   
+  
+
+
+</div>
+</div>
+</div>

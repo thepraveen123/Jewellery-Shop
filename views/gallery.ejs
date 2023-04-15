@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header><%- include('./common/header.ejs')%></header>
+
+    <!-- gallery1  -->
+    <div class="gallery ">
+        <div class="container-fluid py-5">
+            <div class="row">
+                <div class="col-lg-5 mx-auto text-center abt-1">
+                    <h2 class="text-center lead  h2_ap1 py-5">WELCOME</h2>
+                    <p class="py-3  p_ap1">TO</p>
+                    <img src="png/brand_logo.png" width="150px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--gallery1  -->
+
+    <!-- gallery2 heading -->
+    <div class="container py-3">
+        <div class="row py-3">
+            <div class="col-lg-5 col-md-12 col-sm-12 col-12 mx-auto text-center">
+                <h2 class="p-carousel">GALLERY SECTION </h2>
+                <img src="png/divider.png" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <!-- gallery2 heading-->
+
+    <!-- gallery2 content -->
+
+    <div class="container-fluid py-1">
+       
+        <div class="row py-1">
+           
+
+            <div class="col-lg-5 col-md-12 col-sm-12 col-12 mx-auto text-center ">
+                <h2 class="p-carousel fs-4">DIAMOND COLLECTION </h2>
+            </div>
+        </div>
+        <% if(data.length>0){ %>
+        
+        <div class="row py-1">
+            <% for(let i=0; i<data.length; i++){ %>  
+            <div class="col-lg-3 mt-2  img ">
+                <div class="card border-2 rounded-0 card-1 text-center bg-dark">
+                    <div class="card-body">
+                        <img src="image/dring1.avif" class="img-fluid ">
+                        <h4 class="card-product fs-4 h4_product text-white  mt-1"><%=data[i].p_name %></h4>
+                        <h6 class="h6_products"><span>Price</span> &nbsp;-<%=data[i].p_price %></h6>
+                        <h6 class="h6_products">Discount&nbsp;-<%=data[i].p_discount %></h6>
+                        <h6 class="h6_products">Description&nbsp;-<%=data[i].p_description %></h6>
+                    </div>
+                </div>
+            </div> 
+            <% } %>
+        </div>
+        
+       
+            <% } else { %>
+                no data found
+                <% } %>
+        
+    
+
+    <!-- visit our store -->
+
+    <div class="container-fluid PY-3">
+
+        <div class="row py-2">
+            <div class="col-lg-5 col-md-12 col-sm-12 col-12 mx-auto text-center">
+                <h2 class="p-carousel fs-4 text-center">VISIT OUR STORE</h2>
+            </div>
+        </div>
+         </div>
+
+         <div class="container py-2">
+            <div class="row py-2">
+        
+              <div class="col-lg-6 col-md-6 col-sm-12 col-12 mx-auto text-center border">
+                <img src="image/our_store.avif" class="img-fluid">
+              </div>
+        
+              <div class="col-lg-6 col-md-6 col-sm-12 col-12 mx-auto text-center border bg">
+                <h2 class="h2-details">WHY CHAUHAN JEWELLERS</h2>
+                <P class="p-details">To accents the feminine beauty of women, CHAUHA jewellers is the top Jewellers in Jaipur.
+                  They crafted beautiful indian jewellery in gold with embeded gemstones and diamonds. CHAUHAN excel in Kundan
+                  Meena jewelry and in studdingthe uncut diamonds &other natural gemstones in Gold.CHAUHAN jewellers is one the
+                  best Jewellers in Delhi that has a wide range of Kundan Meenakari Jewellery. In the Wedding jewellery
+                  collection of Chauhan jewelers, they Stud uncut diamonds, emeralds, rubies & sapphires, while the enameling the
+                  sides & the back of the precious jewelry piecework.In the Wedding jewellery collection of CHAUHAN jewelers,
+                  they Stud uncut diamonds, emeralds, rubies & sapphires, while the enameling the sides & the back of the
+                  precious jewelry piecework.</P>
+              </div>
+        
+            </div>
+          </div> 
+
+        
+          <!-- second detail end -->
+        
+          <!-- products section start -->
+        
+
+
+    <footer><%- include('./common/footer.ejs')%></footer>
+</body>
+
+</html>
